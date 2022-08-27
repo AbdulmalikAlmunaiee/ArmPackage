@@ -1,0 +1,200 @@
+abdulmalik@abdulmalik-virtual-machine:~$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+abdulmalik@abdulmalik-virtual-machine:~$ source ~/.bashrc
+bash: /opt/ros/kinetic/setup.bash: No such file or directory
+bash: /opt/ros/kinetic/setup.bash: No such file or directory
+abdulmalik@abdulmalik-virtual-machine:~$ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+Package python-rosinstall is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+However the following packages replace it:
+  python3-rosinstall
+
+Package python-rosinstall-generator is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+However the following packages replace it:
+  python3-rosinstall-generator
+
+Package python-wstool is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+However the following packages replace it:
+  python3-wstool
+
+Package python-rosdep is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'python-rosdep' has no installation candidate
+E: Package 'python-rosinstall' has no installation candidate
+E: Package 'python-rosinstall-generator' has no installation candidate
+E: Package 'python-wstool' has no installation candidate
+abdulmalik@abdulmalik-virtual-machine:~$ sudo apt install python-rosdep
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+Package python-rosdep is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'python-rosdep' has no installation candidate
+abdulmalik@abdulmalik-virtual-machine:~$ sudo rosdep init
+sudo: rosdep: command not found
+abdulmalik@abdulmalik-virtual-machine:~$ rosdep update
+
+Command 'rosdep' not found, but can be installed with:
+
+sudo apt install python3-rosdep2
+
+abdulmalik@abdulmalik-virtual-machine:~$ sudo apt-get install ros-noetic-catkin
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libfwupdplugin1
+  libgstreamer-plugins-bad1.0-0 libva-wayland2 linux-headers-5.13.0-30-generic
+  linux-hwe-5.13-headers-5.13.0-30 linux-image-5.13.0-30-generic
+  linux-modules-5.13.0-30-generic linux-modules-extra-5.13.0-30-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-catkin-pkg python3-nose
+Suggested packages:
+  python-nose-doc
+The following NEW packages will be installed:
+  python3-catkin-pkg python3-nose ros-noetic-catkin
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 249 kB of archives.
+After this operation, 1265 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://sa.archive.ubuntu.com/ubuntu focal/universe amd64 python3-nose all 1.3.7-5 [116 kB]
+Get:2 http://packages.ros.org/ros/ubuntu focal/main amd64 python3-catkin-pkg all 0.5.2-100 [3840 B]
+Get:3 http://packages.ros.org/ros/ubuntu focal/main amd64 ros-noetic-catkin amd64 0.8.10-1focal.20210423.221558 [129 kB]
+Fetched 249 kB in 2s (127 kB/s)            
+Selecting previously unselected package python3-catkin-pkg.
+(Reading database ... 296460 files and directories currently installed.)
+Preparing to unpack .../python3-catkin-pkg_0.5.2-100_all.deb ...
+Unpacking python3-catkin-pkg (0.5.2-100) ...
+Selecting previously unselected package python3-nose.
+Preparing to unpack .../python3-nose_1.3.7-5_all.deb ...
+Unpacking python3-nose (1.3.7-5) ...
+Selecting previously unselected package ros-noetic-catkin.
+Preparing to unpack .../ros-noetic-catkin_0.8.10-1focal.20210423.221558_amd64.deb ...
+Unpacking ros-noetic-catkin (0.8.10-1focal.20210423.221558) ...
+Setting up python3-nose (1.3.7-5) ...
+Setting up python3-catkin-pkg (0.5.2-100) ...
+Setting up ros-noetic-catkin (0.8.10-1focal.20210423.221558) ...
+Processing triggers for man-db (2.9.1-1) ...
+abdulmalik@abdulmalik-virtual-machine:~$ mkdir -p ~/catkin_ws/src
+abdulmalik@abdulmalik-virtual-machine:~$ cd ~/catkin_ws/
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ catkin_make
+
+Command 'catkin_make' not found, but can be installed with:
+
+sudo apt install catkin
+
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ sudo apt install catkin
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ catkin : Depends: python3-catkin-pkg (>= 0.4.14-2) but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ cd
+abdulmalik@abdulmalik-virtual-machine:~$ sudo apt install catkin
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ catkin : Depends: python3-catkin-pkg (>= 0.4.14-2) but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+abdulmalik@abdulmalik-virtual-machine:~$ cd ~/catkin_ws/src
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws/src$ git clone https://github.com/smart-methods/arduino_robot_arm.git
+
+Command 'git' not found, but can be installed with:
+
+sudo apt install git
+
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws/src$ sudo apt install git
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libfwupdplugin1
+  libgstreamer-plugins-bad1.0-0 libva-wayland2 linux-headers-5.13.0-30-generic
+  linux-hwe-5.13-headers-5.13.0-30 linux-image-5.13.0-30-generic
+  linux-modules-5.13.0-30-generic linux-modules-extra-5.13.0-30-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5470 kB of archives.
+After this operation, 38.5 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://sa.archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 http://sa.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.5 [886 kB]
+Get:3 http://sa.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.5 [4557 kB]
+Fetched 5470 kB in 7s (740 kB/s)                                                  
+Selecting previously unselected package liberror-perl.
+(Reading database ... 296715 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.25.1-1ubuntu3.5_all.deb ...
+Unpacking git-man (1:2.25.1-1ubuntu3.5) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.25.1-1ubuntu3.5_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.5) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.25.1-1ubuntu3.5) ...
+Setting up git (1:2.25.1-1ubuntu3.5) ...
+Processing triggers for man-db (2.9.1-1) ...
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws/src$ cd ~/catkin_ws
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ rosdep install --from-paths src --ignore-src -r -y
+
+Command 'rosdep' not found, but can be installed with:
+
+sudo apt install python3-rosdep2
+
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ sudo apt-get install ros-kinetic-moveit
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+E: Unable to locate package ros-kinetic-moveit
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ sudo apt-get install ros-kinetic-joint-state-publisher ros-kinetic-joint-state-publisher-gui
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+E: Unable to locate package ros-kinetic-joint-state-publisher
+E: Unable to locate package ros-kinetic-joint-state-publisher-gui
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ sudo apt-get install ros-kinetic-gazebo-ros-control joint-state-publisher
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+E: Unable to locate package ros-kinetic-gazebo-ros-control
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ sudo apt-get install ros-kinetic-ros-controllers ros-kinetic-ros-control
+Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+E: Unable to locate package ros-kinetic-ros-controllers
+E: Unable to locate package ros-kinetic-ros-control
+abdulmalik@abdulmalik-virtual-machine:~/catkin_ws$ sudo nano ~/.bashrc
